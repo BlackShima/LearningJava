@@ -1,4 +1,4 @@
-package OOP;
+
 
 public class Myrectangle {
     public static void main(String[] args) {
