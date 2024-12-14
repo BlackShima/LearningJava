@@ -6,7 +6,7 @@ public class DataType {
         float myFloat = 5.99f;
         char myLetter = 'D';
         boolean myBoolean = true;
-        String myString = "Hello, World!";
+        String myString = "Hello My World!";
         byte myByte = -100;
 
         System.out.println("Integer: " + myNum);
