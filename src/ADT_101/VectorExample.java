@@ -8,7 +8,7 @@ public class VectorExample {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Vector<Double> lines = new Vector<Double>();
+        Vector lines = new Vector<>();
         System.out.println("Enter lines of input, use quit to end the program.");
 
         while (true) {
@@ -16,6 +16,7 @@ public class VectorExample {
             if (input.equalsIgnoreCase("quit")) {
                 break;
             }
+            lines.add(input);
         }
 
         System.out.println("Number of lines: " + lines.size());
