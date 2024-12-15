@@ -6,5 +6,6 @@ public class Boolean {
         boolean isFishTasty = false;
         System.out.println(isJavafun);
         System.out.println(isFishTasty);
+
     }
 }
