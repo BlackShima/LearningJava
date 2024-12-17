@@ -1,4 +1,4 @@
-package ADT;
+package ADT_101;
 
 public class CountUp {
     public static void main(String[] args){
