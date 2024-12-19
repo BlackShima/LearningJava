@@ -30,6 +30,7 @@ public class Data {
         }
         public void DisplayResult(Vector<Student> students){
             System.out.println("Total student"+ students.size());
+
                 int countA=0;
                 for (Student student:students){
                     if(student.getFirstName().startsWith("A")){
@@ -37,7 +38,11 @@ public class Data {
                         System.out.println(student.toString());
                     }
                 }
-                System.out.println("A: "+countA);
+                char ch;
+                for(ch='A';ch<='Z';ch++);
+
+
+                System.out.println("A: "+ch+" "+countA);
             //detail of student begin with A
             }
 
