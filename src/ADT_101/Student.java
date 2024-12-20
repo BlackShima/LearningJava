@@ -27,6 +27,6 @@ class Student {
     }
     @Override
     public String toString() {
-        return this.SID + " " + this.firstName + " " + this.lastName;
+        return this.SID + " " + this.firstName + " " + this.lastName+"\n";
     }
 }
