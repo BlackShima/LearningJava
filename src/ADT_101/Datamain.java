@@ -43,7 +43,9 @@ public class Datamain {
                 System.out.println(student.toString());
             }
         }
-        System.out.println("A: " + students.toString());
+        char ch;
+        for(ch = 'A';ch<='Z';ch++)
+        System.out.println(ch + students.toString());
     }
 }
 
