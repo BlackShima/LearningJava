@@ -1,6 +1,6 @@
 package ADT_101;
 
-/*import java.util.Scanner;
+import java.util.Scanner;
 import java.io.File;
 import java.util.StringTokenizer;
 import java.io.IOException;
@@ -12,11 +12,11 @@ public class DatamainNew {
 
         Vector<String> studentInfo = new Vector<String>();
         Vector<Student> students = new Vector<Student>();
-        File file = new File("mycsvfile.csv"); //-----------------------File directory-----------------------//.
+        File file = new File("C://Users//Black//OneDrive//Desktop//ADT//953102_701000-2.csv"); //-----------------------File directory-----------------------//.
         Scanner input = new Scanner(file);
         boolean isStart = true;
 
-        if (file.getName() != "mycsvfile.csv") { // Check if file is .csv or others
+        if (file==null) { // Check if file is .csv or others
             System.out.println("File is not found or invalid file type \nMust be CSV filetype only!!!!");
             isStart = false;
         }
@@ -83,4 +83,4 @@ public class DatamainNew {
         }
         return count;
     } // End of count methood
-} // End of the NameSorting class*/
+} // End of the NameSorting class

@@ -3,7 +3,7 @@ package ADT_101;
   672115047 Samakom Prompanya
  */
 
-/*class Student {
+class Student {
     private String SID;
     private String firstName;
     private String lastName;
@@ -41,4 +41,4 @@ package ADT_101;
     public String toString() {
         return this.SID + " " + this.firstName + " " + this.lastName+"\n";
     }
-}*/
+}
