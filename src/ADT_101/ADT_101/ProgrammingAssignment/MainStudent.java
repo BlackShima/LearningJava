@@ -69,7 +69,7 @@ public class MainStudent{
                 return;
                 
             default:
-            System.out.println("Invalid command. Exitings.");
+            System.out.println("Invalid command. Exiting.");
                 break;
         }
         input.close();
