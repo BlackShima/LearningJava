@@ -114,7 +114,7 @@ public class MainStudent{
     public static int searchStudent(Vector<Student> students,String searchTerm){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter student your student:  ");
+        System.out.println("Enter student your student: ");
         
         
 
