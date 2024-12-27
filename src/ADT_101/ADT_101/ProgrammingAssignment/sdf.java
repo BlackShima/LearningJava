@@ -28,6 +28,6 @@ class Student{
 
     @Override
     public String toString() {
-        return id +" "+first+" "+last;
+        return id +"  "+first+" "+last;
     }
 }
