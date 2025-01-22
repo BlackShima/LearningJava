@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Object> list = new ArrayList<>();
 
+        list.add("org.example.Loan@65ab7765");
         list.add(new Loan("Alice",5000));
         list.add("A Simple string");
         list.add(new Date());
