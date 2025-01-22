@@ -32,6 +32,6 @@ class Loan {
 
     @Override
     public String toString() {
-        return "Name:" + name + ", Amount:" + amount ;
+        return "Name:" + name + "\nAmount:" + amount ;
     }
 }
