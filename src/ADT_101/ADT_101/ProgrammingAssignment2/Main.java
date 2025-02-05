@@ -1,4 +1,6 @@
 package ADT_101.ProgrammingAssignment2;
+
+//672115047 Samakom Prompanya.
 public class Main {
     public static void main(String[] args) {
         long startTime = System.currentTimeMillis();
@@ -8,7 +10,7 @@ public class Main {
         System.out.println("Total Character count: " + stats.getCharCount());
         System.out.println("Total Palindrome found: " + stats.getPalindromeCount());
         System.out.println("Total Number of tokens: " + stats.getTokenCount());
-        System.out.println("Total Number of emoticon: " + stats.getEmoticonCount());
+        System.out.println("Total Number of emoticon: " + stats.getEmoticonCount()); 
         System.out.println("Total of new line: " + stats.getNewLineCount());
         System.out.println("The longest token: " + stats.getLongestToken());
         System.out.println("Average token size: " + stats.getAverageTokenSize());
