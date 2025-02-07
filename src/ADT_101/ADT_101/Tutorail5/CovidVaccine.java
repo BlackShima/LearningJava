@@ -1,7 +1,6 @@
 package ADT_101.Tutorail5;
 
 import java.util.LinkedList;
-import java.util.Vector;
 
 class CovidVaccine {
     private String ID;
