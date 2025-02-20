@@ -1,4 +1,7 @@
 package ProgrammingAssignment3;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class InfixToPostfix {
@@ -21,18 +24,31 @@ public class InfixToPostfix {
     }
 
     public static boolean isValidInfix(String expression) {
-        // Simple validation for paired parentheses and correct characters
         int openBrackets = 0;
+        char prevChar = ' '; // Track previous character
+    
         for (char c : expression.toCharArray()) {
-            if (c == '(') openBrackets++;
-            if (c == ')') openBrackets--;
-            if (!Character.isLetterOrDigit(c) && !isOperator(c) && c != '(' && c != ')') {
+            if (c == '(') {
+                openBrackets++;
+            } else if (c == ')') {
+                openBrackets--;
+                if (openBrackets < 0) return false; // More closing than opening
+            } else if (Character.isDigit(c)) { 
+                // Allow numbers (fixing issue with numeric expressions)
+            } else if (isOperator(c)) {
+                // Ensure two operators don't appear consecutively (like "**" or "++")
+                if (prevChar != ' ' && isOperator(prevChar)) {
+                    return false;
+                }
+            } else if (c != ' ') { 
+                // Invalid character detected (not number, operator, or parentheses)
                 return false;
             }
-            if (openBrackets < 0) return false;
+            prevChar = c;
         }
-        return openBrackets == 0;
+        return openBrackets == 0; // Ensure all parentheses are balanced
     }
+    
 
     public static String infixToPostfix(String expression) {
         LinkedListStack stack = new LinkedListStack();
@@ -64,25 +80,22 @@ public class InfixToPostfix {
     }
 
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Please provide input file (input1.txt) as command line argument.");
-            return;
-        }
-        
-        // Example input and validation
-        String[] expressions = {
-            "a-b/(c+d-e)*(f*g*h+i)",
-            "1+2+3^4**"
-        };
+    String filename = (args.length > 0) ? args[0] : "C:/Users/Black/test/adt/src/ADT_101/ADT_101/ProgrammingAssignment3/input1.csv"; // Use default if no argument
 
-        for (String exp : expressions) {
-            System.out.println("Infix exp: " + exp);
-            if (isValidInfix(exp)) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+        String expression;
+        while ((expression = reader.readLine()) != null) {
+            System.out.println("Infix Expression: " + expression);
+            if (isValidInfix(expression)) {
                 System.out.println("Valid");
-                System.out.println("Postfix exp: " + infixToPostfix(exp));
+                System.out.println("Postfix Expression: " + infixToPostfix(expression));
             } else {
-                System.out.println("Not-Valid");
+                System.out.println("Not Valid");
             }
         }
+    } catch (IOException e) {
+        System.out.println("Error reading file: " + e.getMessage());
     }
+}
+
 }
