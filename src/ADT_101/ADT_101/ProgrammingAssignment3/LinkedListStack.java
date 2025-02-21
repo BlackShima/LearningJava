@@ -31,3 +31,12 @@ public class LinkedListStack {
         return top==null;
     }
 }
+class Node {
+    char data;
+    Node next;
+
+    Node(char data) {
+        this.data = data;
+        this.next = null;
+    }
+}
