@@ -3,7 +3,7 @@ package Lab12;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MinElementFinder {
+public class MinEleFinder {
     public static <E extends Comparable<E>> E min(ArrayList<E> list) {
         if (list == null || list.isEmpty()) {
             throw new IllegalArgumentException("List cannot be null or empty");

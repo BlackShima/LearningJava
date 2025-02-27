@@ -3,7 +3,7 @@ package Lab12;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class ShuffleArrayList {
+public class Shuffle {
     public static <E> void shuffle(ArrayList<E> list) {
         Collections.shuffle(list);
     }
